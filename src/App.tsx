@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { ASSETS } from './constants';
 
+
 // --- Components ---
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
@@ -667,6 +668,7 @@ const WaterCollection = () => {
                   loop
                   muted
                   playsInline
+                  preload="auto"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               ) : (
