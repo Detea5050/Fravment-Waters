@@ -1402,6 +1402,9 @@ const Footer = () => {
         <div className="text-[9px] uppercase tracking-[0.2em] font-bold text-gray-400 text-center leading-relaxed">
           © 2011 Fravment Bottled Water Trading LLC. All rights reserved.
         </div>
+        <div className="text-[9px] uppercase tracking-[0.2em] font-bold text-black-400 text-center leading-relaxed">
+          This project was Coded by Fronent Developer: AITUAGBOGHIOMWAN DESTINY
+        </div>
       </div>
     </footer>
   );
