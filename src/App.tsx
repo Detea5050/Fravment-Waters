@@ -779,20 +779,20 @@ const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonials = [
     {
-      name: "Sarah Jenkins",
-      role: "Yoga Instructor",
+      name: "Alex Rivers",
+      role: "Marketing Lead",
       quote: "I've tried many mineral waters, but Fravment has a unique crispness that really helps me stay hydrated during my long sessions. The glass bottle is a huge plus for me.",
-      avatar: "https://picsum.photos/seed/sarah/200"
+      avatar: "https://i.pravatar.cc/300?img=1"
     },
     {
-      name: "Michael Chen",
-      role: "Software Engineer",
+      name: "Taylor Kim",
+      role: "Designer",
       quote: "The purity of this water is noticeable. I keep a bottle at my desk all day. It's refreshing and I love the minimalist design of the brand.",
-      avatar: "https://picsum.photos/seed/michael/200"
+      avatar: "https://i.pravatar.cc/300?img=3"
     },
     {
-      name: "Elena Rodriguez",
-      role: "Interior Designer",
+      name: "Casey Morgan",
+      role: "Product Manager",
       quote: "As someone who appreciates aesthetics, the Fravment bottle is a work of art. But more importantly, the water tastes incredibly clean and fresh.",
       avatar: "https://picsum.photos/seed/elena/200"
     },
@@ -870,6 +870,7 @@ const TestimonialsSection = () => {
                         alt={testimonial.name}
                         className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
                       />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -1051,7 +1052,7 @@ const DigitalExperience = () => {
             {/* Formula Car "Popping Out" */}
             <motion.img
               src={ASSETS.IMAGES.FORMULA_CAR}
-              alt="Formula 1 Car"
+              alt=""
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] max-w-none z-20 drop-shadow-2xl pointer-events-none"
               style={{
                 transform: "translate(-50%, -50%) translateZ(100px) rotate(-15deg)",
@@ -1150,24 +1151,24 @@ const Modal = ({ isOpen, onClose, title, message }: { isOpen: boolean; onClose: 
 const TeamSection = () => {
   const team = [
     {
-      name: "Marvin McKinney",
-      role: "Senior Advisor",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=60"
+      name: "Alex Rivers",
+      role: "Marketing Lead",
+      image: "https://i.pravatar.cc/300?img=1" 
     },
     {
-      name: "Savannah Nguyen",
-      role: "Senior Advisor",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=60"
+      name: "Jordan Lee",
+      role: "Developer",
+      image: "https://i.pravatar.cc/300?img=2"
     },
     {
-      name: "James Wilson",
-      role: "Chief Advisor",
-      image: "https://plus.unsplash.com/premium_photo-1661766386981-1140b7b37193?w=600&auto=format&fit=crop&q=60"
+      name: "Taylor Kim",
+      role: "Designer",
+      image: "https://i.pravatar.cc/300?img=3"
     },
     {
-      name: "Kathryn Murphy",
-      role: "Junior Advisor",
-      image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600&auto=format&fit=crop&q=60"
+      name: "Casey Morgan",
+      role: "Product Manager",
+      image: "https://i.pravatar.cc/300?img=4"
     }
   ];
 
