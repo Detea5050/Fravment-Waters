@@ -222,23 +222,30 @@ const Hero = () => {
           </div>
           
           <h2 className="text-3xl md:text-6xl font-display italic font-bold tracking-tighter leading-[0.9] mb-4 text-white">
-            FRAVMENT <br />
-            MINERAL <br />
-            WATER
+            Pure Hydration. <br />
+            Engineered for a Better Life.
           </h2>
           
           <p className="text-base text-white/70 max-w-md mb-6">
-            750ml Non-Carbonated Water. Glass. <br />
-            Capturing the purity and enduring quality of Fravment's timeless elegance.
+            Fravment Waters delivers ultra-clean, refreshing water designed for performance, wellness, and everyday clarity.
           </p>
 
-          <button 
-            onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group flex items-center gap-4 bg-white text-black px-6 py-3 rounded-full hover:bg-white/90 transition-all"
-          >
-            <span className="uppercase tracking-widest text-xs font-bold">Discover More</span>
-            <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full hover:bg-white/90 transition-all"
+            >
+              <span className="uppercase tracking-widest text-xs font-bold">Get Started</span>
+              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group flex items-center gap-2 bg-white/20 border border-white/50 text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all"
+            >
+              <span className="uppercase tracking-widest text-xs font-bold">Learn More</span>
+              <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -400,6 +407,7 @@ const FutureOfWater = () => {
 
   return (
     <section 
+      id="benefits"
       onMouseMove={handleMouseMove}
       className="relative min-h-screen bg-zinc-100 text-black overflow-hidden flex items-center justify-center py-20"
     >
@@ -412,12 +420,17 @@ const FutureOfWater = () => {
         {/* Left Content */}
         <div>
           <h2 className="text-3xl md:text-5xl font-display italic font-bold tracking-tighter mb-8 leading-tight">
-            The Vanguard of <br />
-            Hydration
+            Benefits
           </h2>
           <p className="text-base text-gray-600 max-w-md mb-8">
-            Fravment is more than water; it is a digital-first lifestyle brand. By joining our inner circle, you gain access to a proprietary ecosystem where physical purity meets digital innovation. We are redefining the relationship between the consumer and the source through blockchain-verified transparency and exclusive member benefits.
+            Feel the difference with every sip:
           </p>
+          <ul className="text-base text-gray-600 max-w-md mb-8 space-y-2 list-disc list-inside">
+            <li>Improves focus and mental clarity</li>
+            <li>Supports physical performance</li>
+            <li>Helps maintain steady energy levels</li>
+            <li>Refreshes and revitalizes your body</li>
+          </ul>
         </div>
 
         {/* Right Content - Tilted Phone */}
@@ -490,11 +503,10 @@ const PuritySection = () => {
         <div className="order-1 md:order-2">
           <span className="text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-4 block">The Standard</span>
           <h2 className="text-2xl md:text-4xl font-display italic font-bold tracking-tighter mb-6 leading-tight">
-            Molecular <br />
-            Perfection
+            The Standard
           </h2>
           <p className="text-sm text-gray-600 max-w-md mb-8">
-            Our water is characterized by a naturally high pH and a rich concentration of essential electrolytes, including Magnesium, Calcium, and Potassium. Every batch undergoes rigorous 12-stage analytical testing to ensure it meets the Fravment Gold Standard—the highest benchmark for mineral water globally.
+            Designed to go beyond ordinary water. Every drop is crafted to support your body, boost performance, and deliver unmatched purity.
           </p>
           <div className="flex items-center gap-6">
             <div className="flex flex-col">
@@ -555,13 +567,16 @@ const SustainabilitySection = () => {
 
       <div className="max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center relative z-10">
         <div className="max-w-3xl">
-          <span className="text-xs uppercase tracking-widest font-bold text-gray-400 mb-4 block">Our Commitment</span>
+          <span className="text-xs uppercase tracking-widest font-bold text-gray-400 mb-4 block">Commitment</span>
           <h2 className="text-3xl md:text-6xl font-bold tracking-tighter mb-8 leading-tight">
-            Circular Luxury
+            Commitment
           </h2>
-          <p className="text-lg text-gray-600 mb-12">
-            Sustainability is not a feature; it is our foundation. Fravment operates on a closed-loop philosophy, utilizing bespoke flint glass vessels designed for infinite recyclability. Our production facilities are powered by 100% renewable geothermal energy, ensuring that our footprint on the earth is as light as the water we serve.
-          </p>
+          <ul className="text-lg text-gray-600 mb-12 space-y-3 list-disc list-inside">
+            <li>Ultra-pure filtration for clean, crisp hydration</li>
+            <li>Designed for daily performance and wellness</li>
+            <li>Smooth taste with no harsh aftertaste</li>
+            <li>Consistent quality you can trust</li>
+          </ul>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 w-full mt-12">
@@ -585,27 +600,27 @@ const SustainabilitySection = () => {
 };
 
 const WaterCollection = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true); // default dark mode
 
   const waterTypes = [
     {
-      title: "Still",
-      subtitle: "The Purest Form",
-      description: "Naturally filtered through volcanic strata, our still water offers a crisp, clean taste that honors its ancient origin.",
+      title: "Sparkling Water",
+      subtitle: "Refined Effervescence",
+      description: "Delicate, fine bubbles that dance on the palate, enhancing the natural mineral profile with a sophisticated lift.",
       video: "/videos/animate-this-image.mp4",
       image: "",
       height: "h-[350px]"
     },
     {
-      title: "Sparkling",
-      subtitle: "Refined Effervescence",
-      description: "Delicate, fine bubbles that dance on the palate, enhancing the natural mineral profile with a sophisticated lift.",
+      title: "Still Water",
+      subtitle: "The Purest Form",
+      description: "Naturally filtered through volcanic strata, our still water offers a crisp, clean taste that honors its ancient origin.",
       video: "/videos/Desertwater.mp4",
       image: "",
       height: "h-[450px]"
     },
     {
-      title: "Alkaline",
+      title: "Alkaline Water",
       subtitle: "Enhanced Balance",
       description: "Ionized to a pH of 9.5+, our alkaline water is designed to support hydration and restore your body's natural equilibrium.",
       video: "/videos/Water animate.mp4",
@@ -613,7 +628,7 @@ const WaterCollection = () => {
       height: "h-[400px]"
     },
     {
-      title: "Infused",
+      title: "Infused Water",
       subtitle: "Botanical Essence",
       description: "A subtle hint of organic botanicals, cold-pressed to preserve the delicate aromas of nature's finest ingredients.",
       video: "/videos/Watercup.mp4",
@@ -643,13 +658,12 @@ const WaterCollection = () => {
           </div>
           
           <h2 className="text-2xl md:text-4xl font-bold tracking-tighter mb-4 max-w-3xl leading-[1.1]">
-            There may not be a single switch, <br />
-            <span className={isToggled ? 'text-zinc-500' : 'text-gray-400'}>but there are clear steps forward.</span>
+            Our Premium Water Collection
           </h2>
           
           <p className={`max-w-xl text-[9px] uppercase tracking-widest font-medium transition-colors ${isToggled ? 'text-zinc-500' : 'text-gray-500'}`}>
-            Every path is different. These are the ways we help you <br />
-            move forward with confidence.
+            Discover the range of Fravment Waters designed for every moment. <br />
+            Each bottle crafted with precision and care.
           </p>
         </div>
 
@@ -686,7 +700,7 @@ const WaterCollection = () => {
               {/* Content */}
               <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">{water.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-1">{water.title}</h3>
                   <p className="text-[10px] uppercase tracking-widest text-white/60 font-medium">{water.subtitle}</p>
                 </div>
                 
@@ -1179,7 +1193,7 @@ const TeamSection = () => {
           <span className="text-xs font-bold text-gray-400 mb-4 block uppercase tracking-wider">The Vanguard</span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
             The minds behind <br />
-            <span className="text-gray-400">the fragment.</span>
+            <span className="text-gray-400">the fravment.</span>
           </h2>
         </div>
 
@@ -1271,8 +1285,8 @@ const Subscribe = () => {
       <Modal 
         isOpen={showModal} 
         onClose={() => setShowModal(false)} 
-        title="Welcome to the Circle" 
-        message="Thank you for joining Fravment's inner circle. You will be the first to receive priority allocation for our limited edition releases."
+        title="Welcome to Our Exclusive Circle" 
+        message="Thank you for joining Fravment's Inner Circle. You will receive priority access to our limited-edition releases and exclusive events."
       />
 
       {/* Water Droplets */}
@@ -1282,11 +1296,11 @@ const Subscribe = () => {
 
       <div className="max-w-3xl mx-auto px-6 w-full relative z-10 text-center">
         <div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-6">
-            Join the <span className="text-gray-400">Inner Circle.</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
+            Contact
           </h2>
-          <p className="text-base text-gray-600 mb-12">
-            Subscribe to receive priority allocation for limited edition releases and invitations to our global digital concierge events.
+          <p className="text-xl text-gray-700 mb-10">
+            Get early access to exclusive drops, private updates, and premium offers.
           </p>
 
           <form onSubmit={handleSubmit} className="grid gap-8 text-left max-w-xl mx-auto">
@@ -1340,7 +1354,7 @@ const Subscribe = () => {
               type="submit"
               className="w-full md:w-auto bg-black text-white px-12 py-5 rounded-xl text-sm font-bold uppercase tracking-[0.2em] hover:bg-gray-800 transition-colors mt-4 self-center"
             >
-              Start your journey
+              Join Now
             </button>
           </form>
         </div>
